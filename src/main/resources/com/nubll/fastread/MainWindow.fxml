@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="491.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.nubll.fastread.ReadController">
+   <children>
+      <TextArea fx:id="textArea" layoutX="12.0" layoutY="59.0" prefHeight="316.0" prefWidth="575.0" />
+      <Label layoutX="10.0" layoutY="32.0" text="Text:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="exit" layoutX="526.0" layoutY="444.0" mnemonicParsing="false" onAction="#exit" prefHeight="33.0" prefWidth="61.0" text="Exit" />
+      <Button fx:id="clear" layoutX="381.0" layoutY="444.0" mnemonicParsing="false" onAction="#clear" prefHeight="33.0" prefWidth="61.0" text="Clear" />
+      <Button fx:id="resume" layoutX="300.0" layoutY="444.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="61.0" text="Resume" />
+      <Button fx:id="start" layoutX="228.0" layoutY="444.0" mnemonicParsing="false" onAction="#openReader" prefHeight="33.0" prefWidth="61.0" text="Start" />
+      <Label layoutX="15.0" layoutY="395.0" prefHeight="17.0" prefWidth="104.0" text="Speed (word/mn) :" />
+      <TextField fx:id="speedField" layoutX="15.0" layoutY="412.0" onAction="#changeSlider" />
+      <Slider fx:id="speedSlider" blockIncrement="250.0" layoutX="20.0" layoutY="444.0" max="1000.0" showTickLabels="true">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Slider>
+      <MenuBar prefHeight="27.0" prefWidth="97.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#New" text="New" />
+                  <MenuItem mnemonicParsing="false" onAction="#chooseFile" text="Open" />
+                  <MenuItem mnemonicParsing="false" onAction="#save" text="Save" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#showAbout" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </children>
+</AnchorPane>
